@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.chrome.options import Options
 import logging
+import os
 
 def open_chome():
     # Tạo Chrome options
@@ -27,10 +28,6 @@ def open_chome():
     driver = webdriver.Chrome(options=chrome_options)
     driver.get('https://www.meinvoice.vn/tra-cuu')
     return driver
-
-def lay_ma_hoa_don_tu_txt(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return f.readline().strip()
 
 def lay_danh_sach_ma_hoa_don_tu_txt(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
